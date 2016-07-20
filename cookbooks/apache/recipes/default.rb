@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+include_recipe "munin"
+
 package "apache2"
 package "libwww-perl"
 

@@ -1,0 +1,17 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+
+provisioner:
+  name: chef_zero
+  roles_path: 'roles/'
+
+platforms:
+  - name: ubuntu-16.04
+
+suites:
+  - name: serverinfo
+    run_list:
+      - recipe[serverinfo::default]
+    data_bags_path: test/integration/serverinfo/data_bags
